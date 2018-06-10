@@ -1,0 +1,671 @@
+html, body {
+    color: #105289;
+}
+/* The side navigation menu */
+.sidenav {
+    height: 98%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #f5f5f5; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+.sidenav .dropdown-contents {
+    width: 265px;
+}
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #105289;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav li {
+	display: block;
+}
+.sidenav .icon {
+    font-size: 25px;
+}
+.sidenav li:hover, .sidenav li:active {
+    background-color: #ffffff;
+}
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #D31141;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+.headerbar {
+    border-radius: 0;
+    max-width: 1220px;
+    margin: 0 auto;
+	background-color: #0076b1;
+    background-image: none;
+}
+.backheaderbar {
+	background-color: #0076b1;
+    background-image: none;
+    background-repeat: repeat-x;
+}
+.wrap {
+    border-radius: 0;
+    padding: 0 15px 0 15px;
+	max-width: 1200px;
+}
+.navbar {
+	border-radius: 0;
+	max-width: 1220px;
+    margin: auto;
+    background-color: #f5f5f5;
+	padding: 3px 10px 3px 2px;
+}
+.navbar a {
+    font-size: 15px;
+	font-family:Roboto;
+	font-weight:500;
+}
+.navbar .icon {
+    font-size: 20px;
+}
+.navbar .button .icon {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.navbar ul.navlinks {
+	border-top: none;
+	
+}
+.navbar .dropdown-contents a {
+    font-size: 1em;
+}
+.navbar .header-profile {
+    float: left;
+    margin-right: 5px;
+}
+.nav-username {
+    text-align: center;
+}
+.header-profile-badge {
+	float: right;
+    position: relative;
+    opacity: 1;
+    padding: 3px 5px;
+    animation: badge 1.5s ease infinite;
+    left: 0;
+    top: 17px;
+}
+
+.header-avatar img.avatar {
+    position: relative;
+    left: 15px;
+}
+@keyframes badge{
+0%{opacity: 0;}
+100%{opacity: 1;}
+}
+.no-avatar {
+    background-image: url(./images/no_avatar.gif);
+    background-size: 30px;
+    height: 30px;
+    width: 30px;
+	border-radius: 50%;
+}
+body {
+    padding: 0 0 12px 0;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.login, .register {
+	float:	right;
+	width: 35px;
+    height: 35px;
+    border-radius: 50% !important;
+	margin: 0 1px;
+	padding: 0 !important;
+}
+.header {
+    background-color: #0076B1;
+	padding: 10px;
+	box-shadow: 0 0 4px #717171;
+	margin: 0 -5px 4px -5px !important;
+}
+.forabg, .forumbg {
+    background-image: none;
+	background-color: transparent;
+}
+ul.forums {
+    background-color: #f5f5f5;
+	background-image: none;
+}
+li.row {
+    border-top-color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+    padding: 5px;	
+
+}
+li.row:hover {
+    background-color: #f5f5f5;
+}
+.sidenav .dropdown {
+	    left: 10px;
+    top: 3.2em;
+}
+.sidenav .dropdown-contents a {
+    font-size: 11px;
+}
+@media (max-width: 700px){
+.dropdown-extended .dropdown-contents {
+    width: 265px;
+}
+}
+a.header-avatar span:after {
+    content: "";
+}
+@media (max-width: 700px) {
+.forabg {
+    border-radius: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.breadcrumbs .crumb a {
+	max-width: 86px;
+}
+.navbar a {
+	font-size: 12px;
+}
+.navbar .icon {
+	font-size: 17px;
+}
+.headerbar {
+	height: auto;
+}
+.login, .register {
+	bottom: 35px;
+}
+.login:before, .register:before {
+    border-radius: 50%;
+}
+.header-profile-badge {
+	left: 6%;
+}
+}
+.topbar {
+	background-color: #f5f5f5;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 3px solid #0076b1;	
+}
+.stat-block {
+    clear: both;
+    background-color: #f5f5f5;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-left: -15px;
+    margin-right: -15px;	
+}
+.breadcrumbs .crumb.wrapped-max a {
+    max-width: 90px;
+}
+.breadcrumbs .crumb.wrapped-wide a {
+    max-width: 65px;
+}
+
+.time .icon {
+    font-size: 20px;
+    color: #0076b1;	
+}
+.search-box .inputbox, .search-box .inputbox:hover, .search-box .inputbox:focus {
+    border-width: 2px;
+}
+.search-box .inputbox {
+    height: 34px;
+    border-radius: 4px;
+    border-width: 2px;
+}
+.action-bar .button-search {
+    margin: 0 2px;
+}
+@-webkit-keyframes button {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+@keyframes button {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+.button {
+    padding: 8px 8px;
+    background-image: none;
+    background-color: #e1e1e1;
+    color: #0076b1;
+    border-color: transparent;
+	  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+      border-radius: 50%;
+}
+.button:before {
+  content: '';
+  position: absolute;
+  border: #e1e1e1 solid 3px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+      border-radius: 50%;
+}
+.button:hover:before, .button:focus:before, .button:active:before {
+  -webkit-animation-name: button;
+  animation-name: button;
+}
+.button:hover,.button:active {
+    border-color: transparent;
+    background-image: none;
+    background-color: #e1e1e1;
+    text-shadow: none;
+}
+.button-secondary:focus, .button-secondary:hover, .button:focus .icon, .button:hover .icon {
+    color: #D31141;
+}
+.button .icon, .button-secondary {
+    color: #0A8ED0;
+}
+.button span {
+    display: none;
+}
+.button:hover, .button:focus {
+    border-color: #e1e1e1;
+    background-color: #e1e1e1;
+    background-image: none;
+    text-shadow: none;
+}
+.post-buttons .button, .format-buttons .button {
+    padding: 5px;
+}
+.custombbcode {
+    border-radius: 0;
+}
+.custombbcode:before {
+    border: none;
+}
+.jumpbox .button {
+    padding: 18px;
+}
+.jumpbox .button:before {
+    content: "\f148";
+    font-family: FontAwesome;
+    font-size: 14px;
+    font-weight: normal;
+	padding: 5px;
+}
+.pagination li a, .pagination li span {
+    border-radius: 50%;
+    padding: 4px 9px;
+}
+.pagination li a {
+    background: #e1e1e1;
+    border-color: #e1e1e1;
+    color: #0076b1;
+}
+.pagination .arrow a {
+    padding: 4px 4px;
+}
+.row .pagination li a, .row .pagination li span {
+    border-radius: 50%;
+    padding: 5px 7px;
+}
+.row .pagination {
+    margin-bottom: 5px;
+}
+.pagination li a:hover, .pagination li a:hover .icon, .pagination .dropdown-visible a.dropdown-trigger, .nojs .pagination .dropdown-container:hover a.dropdown-trigger {
+    background: #e1e1e1;
+    border-color: #e1e1e1;
+    color: #D31141;
+}
+h2.forum-title {
+    background-color: #e1e1e1;
+    padding: 5px;
+    text-align: center;
+}
+.bg1, .bg2 {
+    background-color: #f5f5f5;
+}
+a.header-avatar img {
+    margin-bottom: 0;
+    max-height: 30px;
+    vertical-align: middle;
+    width: auto;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.dropdown-extended .header {
+    background-color: #0076b1;
+    background-image: none;
+    text-shadow: none;	
+}
+.dropdown-extended .header, .dropdown-extended .footer {
+    border-color: #B9B9B9;
+    color: #ffffff;
+}
+.dropdown-extended .header .header_settings a {
+    color: #ffffff;
+}
+.dropdown-extended ul li:hover {
+    background-color: #f5f5f5;
+}
+.dropdown-extended .pointer-inner {
+    border-color: #0076b1 transparent;
+}
+.dropdown .dropdown-contents {
+    background: #e1e1e1;
+}
+.dropdown .pointer-inner {
+    border-color: #e1e1e1 transparent;
+}
+.jumpbox-sub-link {
+    background-color: #e1e1e1;
+}
+.jumpbox-sub-link:hover {
+    background-color: #ffffff;
+}
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 32px;
+    font-size: 17px;
+    width: 34%;
+	margin: 0 3px;
+}
+.tablink .icon {
+    font-size: 17px;
+}
+@media (max-width: 700px) {
+.tablink span {
+	display: none;
+}
+}
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    display: none;
+    padding: 20px;
+    height: 100%;
+}
+.tabcontentblock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul.topiclist dd {
+    border-left-color: transparent;
+}
+li.row:hover dd {
+    border-left-color: transparent;
+}
+dd.lastpost > span, ul.topiclist dd.info > span, ul.topiclist dd.time > span, dd.redirect > span, dd.moderation > span {
+    text-align: center;
+}
+
+.dropdown-containers {
+    display: none;
+    padding-left: 8px;
+}
+.sidenav .dropdown-btn {
+    padding: 8px 8px 8px 16px;
+    font-size: 20px;
+    color: #105289;
+    width: 100%;
+    text-align: left;	
+}
+.notification_list .header {
+    color: #105289;
+    text-align: center;
+    background-color: transparent;
+    box-shadow: none;
+}
+.header_settings a {
+	font-size: 12px;
+    display: inline-block;
+    color: #105289;
+    padding: 0 6px;
+}
+.notification_list li {
+    display: flex;
+}
+a.notification-block {
+    padding: 0;
+    font-size: 12px;
+}
+.notification_list p.notification-time {
+    text-align: left;
+}
+
+.notification_list ul {
+    max-height: 220px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    clear: both;
+}
+
+::-webkit-scrollbar {
+      width: 8px;
+} /* this targets the default scrollbar (compulsory) */
+::-webkit-scrollbar-track {
+      background-color: #f5f5f5;
+} /* the new scrollbar will have a flat appearance with the set background color */
+ 
+::-webkit-scrollbar-thumb {
+      background-color: #0076b1; 
+} /* this will style the thumb, ignoring the track */
+ 
+::-webkit-scrollbar-button {
+      background-color: #0076b1;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+ 
+::-webkit-scrollbar-corner {
+      background-color: #171717;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+.times p {
+    margin: 0;
+    text-align: right;
+}
+.times {
+    float: right;
+}
+.times .dropdown {
+    top: 0;
+    right: 22px;
+}
+.times .dropdown-contents {
+    color: #4C5D77;
+}
+
+.mark-buttons {
+    display: flex;
+}
+.mark-buttons li {
+    width: 97px;
+	height: 61px;
+    overflow-y: auto;
+	display: inline-flex;
+}
+.mark-buttons li a {
+    font-size: 12px;
+    text-align: center;	
+}
+.page-footer {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+@media (max-width:320px){
+	.breadcrumbs .crumb a {
+    max-width: 75px;
+}
+li.breadcrumbs {
+    max-width: 260px !important;
+}
+}
+.post {
+    border-radius: 0;
+}
+.postprofile .no-avatar {
+    width: auto;
+    background-image: none;
+    height: 103px;
+}
+.postprofile .no-avatar .avatar-container {
+    background-image: url(./images/no_avatar.gif);
+    background-size: 90px;	
+    height: 90px;
+    width: 90px;
+    margin-bottom: 3px;
+}
+.online{
+	background-image:none !important;
+}
+.offline:before {
+    content: "\f111";
+    font-family: fontawesome;
+    font-size: 18px;
+    position: absolute;
+    right: 5px;
+    color: #a20000;
+    text-shadow: 0 0 1px #a20000;	
+}
+.online:before {
+    content: "\f111";
+    font-family: fontawesome;
+    font-size: 18px;
+    position: absolute;
+    right: 5px;
+    color: #01a200;
+    text-shadow: 0 0 1px #01a200;	
+}
+.has-profile .postbody h3 {
+    margin-right: 200px;
+}
+blockquote {
+    background-color: #46bffb;
+    border-color: transparent;
+}
+blockquote blockquote {
+    background-color: #44b5ec;
+}
+.codebox {
+    background-color: #189ada;
+    border-color: transparent;
+}
+.codebox code {
+    color: #000000;
+	font-size: 1.1em;
+}
+.codebox p {
+    border-bottom-color: #ffffff;
+}
+.codebox a {
+    color: #fff;
+}
+cite a {
+    color: #ffffff;
+}
+.dropdown-contents li:hover {
+    background-color: #fff;
+}
+.dropdown .dropdown-contents {
+    border-radius: 0;
+}
+.panel {
+    background-color: #f5f5f5;
+	border-radius: 0;
+}
+a.button1, input.button1, input.button3, a.button2, input.button2 {
+    color: #000;
+    background-color: #46bffb;
+	background-image:none;
+}
+a.button2, input.button2, input.button3,a.button1, input.button1 {
+    border-color: transparent;
+}
