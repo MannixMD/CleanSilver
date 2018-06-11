@@ -42,7 +42,7 @@
 	<!-- IF not S_IS_BOT and S_DISPLAY_POST_INFO -->
 			<!-- EVENT viewforum_buttons_top_before -->
 
-		<a href="{U_POST_NEW_TOPIC}" class="button" title="<!-- IF S_IS_LOCKED -->{L_FORUM_LOCKED}<!-- ELSE -->{L_POST_TOPIC}<!-- ENDIF -->">
+		<a href="{U_POST_NEW_TOPIC}" class="button responsive-button" title="<!-- IF S_IS_LOCKED -->{L_FORUM_LOCKED}<!-- ELSE -->{L_POST_TOPIC}<!-- ENDIF -->">
 			<!-- IF S_IS_LOCKED -->
 				<span>{L_BUTTON_FORUM_LOCKED}</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
 			<!-- ELSE -->
@@ -51,7 +51,11 @@
 		</a>
 			<!-- EVENT viewforum_buttons_top_after -->
 	<!-- ENDIF -->
-
+<!-- IF S_SELECT_SORT_DAYS and not S_IS_BOT -->
+			<form method="post" action="{S_FORUM_ACTION}">
+			<!-- INCLUDE display_options.html -->
+			</form>
+		<!-- ENDIF -->
 	<!-- IF S_DISPLAY_SEARCHBOX -->
 		<div class="search-box" role="search">
 			<form method="get" id="forum-search" action="{S_SEARCHBOX_ACTION}">
@@ -69,6 +73,8 @@
 		</div>
 	<!-- ENDIF -->
 
+
+</div>
 	<div class="pagination">
 		<!-- IF not S_IS_BOT and U_MARK_TOPICS and .topicrow --><li id="topics"><a href="{U_MARK_TOPICS}" class="mark" accesskey="m" data-ajax="mark_topics_read">{L_MARK_TOPICS_READ}</a></li> <!-- ENDIF -->
 		
@@ -266,7 +272,7 @@
 		<!-- IF not S_IS_BOT and S_DISPLAY_POST_INFO -->
 			<!-- EVENT viewforum_buttons_bottom_before -->
 
-			<a href="{U_POST_NEW_TOPIC}" class="button" title="<!-- IF S_IS_LOCKED -->{L_FORUM_LOCKED}<!-- ELSE -->{L_POST_TOPIC}<!-- ENDIF -->">
+			<a href="{U_POST_NEW_TOPIC}" class="button responsive-hide" title="<!-- IF S_IS_LOCKED -->{L_FORUM_LOCKED}<!-- ELSE -->{L_POST_TOPIC}<!-- ENDIF -->">
 			<!-- IF S_IS_LOCKED -->
 				<span>{L_BUTTON_FORUM_LOCKED}</span> <i class="icon fa-lock fa-fw" aria-hidden="true"></i>
 			<!-- ELSE -->
