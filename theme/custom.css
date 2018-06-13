@@ -627,13 +627,14 @@ li.breadcrumbs {
 }
 .online{
 	background-image:none !important;
+	animation-name: online;
 }
 .offline:before {
     content: "\f111";
     font-family: fontawesome;
     font-size: 18px;
-    position: absolute;
-    right: 5px;
+    position: relative;
+    float: right;
     color: #a20000;
     text-shadow: 0 0 1px #a20000;	
 }
@@ -641,11 +642,12 @@ li.breadcrumbs {
     content: "\f111";
     font-family: fontawesome;
     font-size: 18px;
-    position: absolute;
-    right: 5px;
+    position: relative;
+    float: right;
     color: #01a200;
     text-shadow: 0 0 1px #01a200;	
 }
+
 .has-profile .postbody h3 {
     margin-right: 200px;
 }
@@ -691,6 +693,12 @@ a.button1, input.button1, input.button3, a.button2, input.button2 {
 a.button2, input.button2, input.button3,a.button1, input.button1 {
     border-color: transparent;
 }
+a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover {
+    border-color: transparent;
+    color: #D31141;
+    background-color: #D2D2D2;
+    background-image: none;
+}
 @media (max-width: 700px){
 .responsive-button .icon {
     font-size: 20px;
@@ -715,6 +723,7 @@ a.button2, input.button2, input.button3,a.button1, input.button1 {
 .tabs .tab > a:hover {
     background: #cccccc;
     color: #D31141;
+	border-top: 2px solid #0076b1;
 }
 .tabs .tab, .minitabs .tab {
     font-weight: 500;
@@ -724,34 +733,53 @@ a.button2, input.button2, input.button3,a.button1, input.button1 {
     background-image: none;
     border-color: #f9f9f9;
     box-shadow: none;
-    color: #f5f7fa;
+    color: #353535;
 	border-top: 2px solid #0076b1;
 }
 .tabs .activetab > a:hover {
-    color: #ffffff;
+    color: #D31141;
 }
 
 .navigation li {
     font-weight: 500;
 }
 .navigation a {
-    color: #045d8a;
-    background: none;    
-	background-color: #e0e0e0;
+	color: #045d8a;
+    background: none;
+    background-color: #e0e0e0;
+    border-left: 2px solid #b7b7b7;
 }
 .navigation a:hover {
     background: #cccccc;
     color: #BC2A4D;
 }
-.navigation .active-subsection a:hover {
-    color: #ffffff;
-}
+
 
 .navigation .active-subsection a {
-    background: #0076b1;
-    color: #f9f9f9;
+    background: #e0e0e0;
+    color: #353535;
+    border-left: 2px solid #0076b1;
 }
-
+@media only screen and (max-width: 900px), only screen and (max-device-width: 900px) {
+#navigation a, .rtl #navigation a {
+    background: #e0e0e0;
+}
+}
+@media only screen and (max-width: 900px), only screen and (max-device-width: 900px){
+.navigation li:first-child a {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+}
+@media only screen and (max-width: 900px), only screen and (max-device-width: 900px){
+.navigation li:last-child a {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+}
+.responsive-tab .responsive-tab-link:before {
+    border-color: #0076b1;
+}
 .cp-mini {
     background-color: #ffffff;
 }
@@ -763,4 +791,17 @@ fieldset {
 }
 .panel-container .panel li.header dd, .panel-container .panel li.header dt {
     color: #f5f5f5;
+}
+dl.details dd {
+    color: #424242;
+}
+table.table1 td {
+    color: #353535;
+}
+table.table1 tbody tr {
+    border-color: transparent;
+}
+table.table1 tbody tr:hover, table.table1 tbody tr.hover {
+    background-color: #f5f5f5;
+    color: #000;
 }

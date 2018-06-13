@@ -5,7 +5,7 @@
 <!-- EVENT memberlist_view_content_prepend -->
 
 <form method="post" action="{S_PROFILE_ACTION}" id="viewprofile">
-<div class="panel bg1<!-- IF S_ONLINE --> online<!-- ENDIF -->">
+<div class="panel bg1<!-- IF S_ONLINE --> online<!-- ELSE --> offline<!-- ENDIF -->">
 	<div class="inner">
 
 	<!-- IF AVATAR_IMG -->
@@ -15,6 +15,14 @@
 			<!-- IF RANK_TITLE --><dd style="text-align: center;">{RANK_TITLE}</dd><!-- ENDIF -->
 			<!-- IF RANK_IMG --><dd style="text-align: center;">{RANK_IMG}</dd><!-- ENDIF -->
 			<!-- EVENT memberlist_view_rank_avatar_after -->
+		</dl>
+		<!-- ELSE -->
+		<dl class="left-box">
+			<dt class="no-avatar"><img src="{T_THEME_PATH}/images/no_avatar.gif"/></dt>
+			<!-- EVENT memberlist_view_rank_no_avatar_before -->
+			<!-- IF RANK_TITLE --><dd style="text-align: center;">{RANK_TITLE}</dd><!-- ENDIF -->
+			<!-- IF RANK_IMG --><dd style="text-align: center;">{RANK_IMG}</dd><!-- ENDIF -->
+			<!-- EVENT memberlist_view_rank_no_avatar_after -->
 		</dl>
 	<!-- ENDIF -->
 
@@ -27,12 +35,7 @@
 			<!-- IF U_USER_BAN --> [ <a href="{U_USER_BAN}">{L_USER_BAN}</a> ]<!-- ENDIF -->
 			<!-- IF U_SWITCH_PERMISSIONS --> [ <a href="{U_SWITCH_PERMISSIONS}">{L_USE_PERMISSIONS}</a> ]<!-- ENDIF -->
 		</dd>
-		<!-- IF not AVATAR_IMG -->
-			<!-- EVENT memberlist_view_rank_no_avatar_before -->
-			<!-- IF RANK_TITLE --><dt>{L_RANK}{L_COLON}</dt> <dd>{RANK_TITLE}</dd><!-- ENDIF -->
-			<!-- IF RANK_IMG --><dt><!-- IF RANK_TITLE -->&nbsp;<!-- ELSE -->{L_RANK}{L_COLON}<!-- ENDIF --></dt> <dd>{RANK_IMG}</dd><!-- ENDIF -->
-			<!-- EVENT memberlist_view_rank_no_avatar_after -->
-		<!-- ENDIF -->
+		
 		<!-- IF S_USER_INACTIVE --><dt>{L_USER_IS_INACTIVE}{L_COLON}</dt> <dd>{USER_INACTIVE_REASON}</dd><!-- ENDIF -->
 		<!-- IF AGE !== '' --><dt>{L_AGE}{L_COLON}</dt> <dd>{AGE}</dd><!-- ENDIF -->
 		<!-- IF S_GROUP_OPTIONS --><dt>{L_USERGROUPS}{L_COLON}</dt> <dd><select name="g">{S_GROUP_OPTIONS}</select> <input type="submit" name="submit" value="{L_GO}" class="button2" /></dd><!-- ENDIF -->
