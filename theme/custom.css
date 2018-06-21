@@ -752,6 +752,7 @@ a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, inpu
 .navigation a:hover {
     background: #cccccc;
     color: #BC2A4D;
+	border-left: 2px solid #0076b1;
 }
 
 
@@ -785,6 +786,7 @@ a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, inpu
 }
 dt label {
     font-weight: 600;
+	color: #105289;
 }
 fieldset {
     font-family: Roboto;
@@ -804,4 +806,42 @@ table.table1 tbody tr {
 table.table1 tbody tr:hover, table.table1 tbody tr.hover {
     background-color: #f5f5f5;
     color: #000;
+}
+.pollbar1,.pollbar2,.pollbar3,.pollbar4,.pollbar5 {
+    background-color: #008cd2;
+    border-bottom-color: #008cd2;
+    border-right-color: #008cd2;
+}
+.file-status.file-uploaded {
+    background: none !important;
+}
+.file-status.file-uploaded:before {
+    content: "\f00c";
+    font-family: FontAwesome;
+    color: #007515;
+    border: 2px solid;
+    border-radius: 50%;	
+}
+table.zebra-list tr:nth-child(odd) td, ul.zebra-list li:nth-child(odd), table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even) {
+    background-color: #e6e6e6;
+}
+#review {
+    background-color: #0076b1;
+    color: #fff;
+    padding: 5px;
+}
+#review a {
+    color: #ddd;
+}
+.minitabs .tab > a {
+    background-color: #e0e0e0;
+    border-top: 2px solid #b7b7b7;
+}
+.minitabs .activetab > a, .minitabs .activetab > a:hover {
+    background-color: #e0e0e0;
+    color: #333333;
+    border-top: 2px solid #0076b1;
+}
+.minitabs .tab > a:hover {
+    border-top: 2px solid #0076b1;
 }
