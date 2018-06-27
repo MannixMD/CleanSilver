@@ -2,6 +2,7 @@ html, body {
     color: #105289;
 	font-family: Roboto;
     font-size: 11px;
+	background: url("./images/background.png");
 }
 a.forumtitle, a.topictitle {
     font-size: 1.1em;
@@ -11,6 +12,29 @@ a.forumtitle, a.topictitle {
 h2, h3 {
 	font-family:Roboto;
     font-weight: 500;	
+}
+.site-description {
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+.site-description h1, .site-description p {
+	display: none;
+}
+#logo {
+    display: block !important;
+    box-sizing: border-box;
+	float:none;
+}
+.site_logo {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: 100%;
+    max-width: 100%;
+    height: 52px;
+    width: 149px;
+    border-radius: 0px;
 }
 /* The side navigation menu */
 .sidenav {
@@ -75,7 +99,7 @@ h2, h3 {
     border-radius: 0;
     max-width: 1220px;
     margin: 0 auto;
-	background-color: #0076b1;
+	background-color: transparent;
     background-image: none;
 }
 .backheaderbar {
@@ -87,6 +111,11 @@ h2, h3 {
     border-radius: 0;
     padding: 0 15px 0 15px;
 	max-width: 1200px;
+}
+@media (max-width: 700px){
+	.wrap {
+	padding: 0 5px;
+}
 }
 .navbar {
 	border-radius: 0;
@@ -119,6 +148,7 @@ h2, h3 {
     float: left;
     margin-right: 5px;
 	margin-left: -12px;
+	
 }
 .nav-username {
     text-align: center;
@@ -136,19 +166,21 @@ h2, h3 {
 .header-avatar img.avatar {
     position: relative;
     left: 15px;
+	border: 2px solid #e1e1e1;
 }
 @keyframes badge{
 0%{opacity: 0;}
 100%{opacity: 1;}
 }
 .topbar .no-avatar {
-    background-image: url(./images/no_avatar.gif);
+    background-image: url("./images/no_avatar.gif");
     background-size: 30px;
     height: 30px;
     width: 30px;
 	border-radius: 50%;
 	margin-left: 0;
-}
+	border: 2px solid #e1e1e1;
+	}
 body {
     padding: 0 0 12px 0;
 }
@@ -236,11 +268,7 @@ a.header-avatar span:after {
     content: "";
 }
 @media (max-width: 700px) {
-.forabg {
-    border-radius: 0;
-    margin-left: -15px;
-    margin-right: -15px;
-}
+
 .breadcrumbs .crumb a {
 	max-width: 86px;
 }
@@ -274,9 +302,7 @@ a.header-avatar span:after {
     clear: both;
     background-color: #f5f5f5;
     padding: 5px;
-    margin-bottom: 5px;
-    margin-left: -15px;
-    margin-right: -15px;	
+    margin-bottom: 5px;	
 }
 .breadcrumbs .crumb.wrapped-max a {
     max-width: 90px;
@@ -387,6 +413,12 @@ a.header-avatar span:after {
     font-size: 14px;
     font-weight: normal;
 	padding: 5px;
+}
+.jumpbox-forum-link {
+    background-color: #c3c3c3;
+}
+.jumpbox-forum-link:hover {
+    background-color: #ffffff;
 }
 .pagination li a, .pagination li span {
     border-radius: 50%;
@@ -609,7 +641,7 @@ li.breadcrumbs {
 }
 
 .postprofile .no-avatar .avatar-container {
-    background-image: url(./images/no_avatar.gif);
+    background-image: url("./images/no_avatar.gif");
     height: 90px;
     background-repeat: no-repeat;
     background-position: left center;
@@ -844,4 +876,498 @@ table.zebra-list tr:nth-child(odd) td, ul.zebra-list li:nth-child(odd), table.ze
 }
 .minitabs .tab > a:hover {
     border-top: 2px solid #0076b1;
+}
+/* SPIN */
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.faa-spin.animated,
+.faa-spin.animated-hover:hover,
+.faa-parent.animated-hover:hover > .faa-spin {
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+.faa-spin.animated.faa-fast,
+.faa-spin.animated-hover.faa-fast:hover,
+.faa-parent.animated-hover:hover > .faa-spin.faa-fast {
+  -webkit-animation: spin 0.7s linear infinite;
+  animation: spin 0.7s linear infinite;
+}
+
+.faa-spin.animated.faa-slow,
+.faa-spin.animated-hover.faa-slow:hover,
+.faa-parent.animated-hover:hover > .faa-spin.faa-slow {
+  -webkit-animation: spin 2.2s linear infinite;
+  animation: spin 2.2s linear infinite;
+}
+.file-progress {
+    background-color: transparent !important;
+}
+.global_read,
+.global_read_mine, 
+.global_read_locked, 
+.global_read_locked_mine, 
+.global_unread, 
+.global_unread_mine, 
+.global_unread_locked, 
+.global_unread_locked_mine, 
+.announce_read, 
+.announce_read_mine, 
+.announce_read_locked, 
+.announce_read_locked_mine, 
+.announce_unread, 
+.announce_unread_mine, 
+.announce_unread_locked, 
+.announce_unread_locked_mine, 
+.forum_link, 
+.forum_read, 
+.forum_read_locked, 
+.forum_read_subforum, 
+.forum_unread, 
+.forum_unread_locked, 
+.forum_unread_subforum, 
+.sticky_read, 
+.sticky_read_mine, 
+.sticky_read_locked, 
+.sticky_read_locked_mine, 
+.sticky_unread, 
+.sticky_unread_mine, 
+.sticky_unread_locked, 
+.sticky_unread_locked_mine, 
+.topic_moved, 
+.topic_read, 
+.topic_read_mine, 
+.topic_read_hot, 
+.topic_read_hot_mine, 
+.topic_read_locked, 
+.topic_read_locked_mine, 
+.topic_unread, 
+.topic_unread_mine, 
+.topic_unread_hot, 
+.topic_unread_hot_mine, 
+.topic_unread_locked, 
+.topic_unread_locked_mine,
+.pm_read,
+.pm_unread
+ {
+    background-image: none;
+}
+.row-item:before {
+    font-size: 30px;
+    left: 10px;
+    padding: 0px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+	font-family: FontAwesome;
+}
+.global_read:before,
+.global_read_mine:before {
+	content: "\f0ac"; 
+	color: #868686;
+}
+.announce_read:before,
+.announce_read_mine:before{
+	content: "\f0a1"; 
+	color: #868686;
+
+}
+
+.sticky_read:before,
+.sticky_read_mine:before { 
+	content: "\f08d"; 
+	color: #868686; 
+	
+}
+.global_unread:before,
+.global_unread_mine:before {
+	content: "\f0ac"; 
+	color: #0076b1; 
+}
+.announce_unread:before,
+.announce_unread_mine:before {
+	content: "\f0a1"; 
+	color: #0076b1; 
+		-webkit-animation: wrench 1.2s ease infinite;
+  animation: wrench 1.2s ease infinite;
+  top: 15%;
+}
+
+.sticky_unread:before,
+.sticky_unread_mine:before {
+	content: "\f08d"; 
+	color: #0076b1; 
+	
+}
+.global_read_locked:before,
+.global_read_locked_mine:before,
+.announce_read_locked:before,
+.announce_read_locked_mine:before,
+.forum_read_locked:before,
+.sticky_read_locked:before,
+.sticky_read_locked_mine:before,
+.topic_read_locked:before,
+.topic_read_locked_mine:before {
+	content: "\f023"; 
+	color: #868686; 
+	 
+}
+.global_unread_locked:before,
+.global_unread_locked_mine:before,
+.announce_unread_locked:before,
+.announce_unread_locked_mine:before,
+.forum_unread_locked:before,
+.sticky_unread_locked:before,
+.sticky_unread_locked_mine:before,
+.topic_unread_locked:before,
+.topic_unread_locked_mine:before {
+	content: "\f023"; 
+	color: #0076b1; 
+	
+}
+.forum_link:before { 
+	content: '\f08e'; 
+	color: #0076b1; 
+}
+.forum_read:before	{ 
+	content: "\f03a"; 
+	color: #868686; 
+	
+}
+
+.topic_read:before,
+.topic_read_mine:before{
+		content: "\f15c";
+	color: #868686;
+}
+.forum_read_subforum:before{
+	content: "\f07b";
+	color: #868686; 
+}
+.forum_unread_subforum:before{
+	content: "\f07b";
+	color: #0076b1;
+}
+.forum_unread:before {
+	content: "\f03a";
+	color: #0076b1; 	
+}
+
+.topic_unread:before,
+.topic_unread_mine:before{
+	content: "\f15c";
+	color: #0076b1;
+}
+
+.topic_moved:before { 
+	content: "\f04e";  
+	color: #868686; 
+	 
+}
+.topic_read_hot:before,
+.topic_read_hot_mine:before { 
+	content: '\f0e7';  
+	color: #868686;
+	left: 15px;			
+	
+}
+.topic_unread_hot:before,
+.topic_unread_hot_mine:before { 
+    content: '\f0e7';
+    color: #0076b1;
+    left: 15px;
+    -webkit-animation: flash 2.5s ease infinite;
+    animation: flash 2.5s ease infinite;	
+	 
+}
+.pm_read:before	{ 
+	content: "\f086";  
+	color: #868686; 
+	 
+}
+.pm_unread:before { 
+	content: "\f086"; 
+	color: #0076b1; 	 
+}
+.topic_unread_hot_mine:before,
+.topic_unread_mine:before,
+.topic_unread_locked_mine:before,
+.sticky_unread_locked_mine:before,
+.sticky_unread_mine:before,
+.announce_unread_mine:before,
+.announce_unread_locked_mine:before,
+.global_unread_mine:before,
+.global_unread_locked_mine:before {
+    color: #008075;
+}
+
+
+@-webkit-keyframes wrench {
+  0% {
+    -webkit-transform: rotate(-12deg);
+    transform: rotate(-12deg);
+  }
+
+  8% {
+    -webkit-transform: rotate(12deg);
+    transform: rotate(12deg);
+  }
+
+  10% {
+    -webkit-transform: rotate(24deg);
+    transform: rotate(24deg);
+  }
+
+  18% {
+    -webkit-transform: rotate(-24deg);
+    transform: rotate(-24deg);
+  }
+
+  20% {
+    -webkit-transform: rotate(-24deg);
+    transform: rotate(-24deg);
+  }
+
+  28% {
+    -webkit-transform: rotate(24deg);
+    transform: rotate(24deg);
+  }
+
+  30% {
+    -webkit-transform: rotate(24deg);
+    transform: rotate(24deg);
+  }
+
+  38% {
+    -webkit-transform: rotate(-24deg);
+    transform: rotate(-24deg);
+  }
+
+  40% {
+    -webkit-transform: rotate(-24deg);
+    transform: rotate(-24deg);
+  }
+
+  48% {
+    -webkit-transform: rotate(24deg);
+    transform: rotate(24deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(24deg);
+    transform: rotate(24deg);
+  }
+
+  58% {
+    -webkit-transform: rotate(-24deg);
+    transform: rotate(-24deg);
+  }
+
+  60% {
+    -webkit-transform: rotate(-24deg);
+    transform: rotate(-24deg);
+  }
+
+  68% {
+    -webkit-transform: rotate(24deg);
+    transform: rotate(24deg);
+  }
+
+  75%, 100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+	color: red;
+  }
+}
+
+@keyframes wrench {
+  0% {
+    -webkit-transform: rotate(-12deg);
+    transform: rotate(-12deg);
+  }
+
+  8% {
+    -webkit-transform: rotate(12deg);
+    transform: rotate(12deg);
+  }
+
+  10% {
+    -webkit-transform: rotate(24deg);
+    transform: rotate(24deg);
+  }
+
+  18% {
+    -webkit-transform: rotate(-24deg);
+    transform: rotate(-24deg);
+  }
+
+  20% {
+    -webkit-transform: rotate(-24deg);
+    transform: rotate(-24deg);
+  }
+
+  28% {
+    -webkit-transform: rotate(24deg);
+    transform: rotate(24deg);
+  }
+
+  30% {
+    -webkit-transform: rotate(24deg);
+    transform: rotate(24deg);
+  }
+
+  38% {
+    -webkit-transform: rotate(-24deg);
+    transform: rotate(-24deg);
+  }
+
+  40% {
+    -webkit-transform: rotate(-24deg);
+    transform: rotate(-24deg);
+  }
+
+  48% {
+    -webkit-transform: rotate(24deg);
+    transform: rotate(24deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(24deg);
+    transform: rotate(24deg);
+  }
+
+  58% {
+    -webkit-transform: rotate(-24deg);
+    transform: rotate(-24deg);
+  }
+
+  60% {
+    -webkit-transform: rotate(-24deg);
+    transform: rotate(-24deg);
+  }
+
+  68% {
+    -webkit-transform: rotate(24deg);
+    transform: rotate(24deg);
+  }
+
+  75%, 100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes flash {
+  0%, 100%, 50% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0%, 100%, 50% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+.profile-contact .button:before {
+	top: -5px;
+    font-size: 25px;
+    left: 5px;
+	display:none;
+}
+.profile-contact .button {
+	margin-left: -10px;
+    background-color: transparent;
+    z-index: 1;	
+} 
+.profile-contact .button span {
+    display: block;
+}
+.profile-contact .button:hover, .profile-contact .button:focus {
+    border-color: transparent;
+}
+@media (max-width:700px){
+	.profile-contact {
+	display: inline-block !important;
+    margin-left: 0 !important;
+	position: absolute;
+    top: 17px;
+    right: 75px;
+	}
+	.ucp-main .profile-contact {
+    display: none !important;
+}
+	.profile-contact strong {
+		display:none;
+	}
+	
+.profile-contact .button {
+    margin-left: 0;
+	background-color: #e1e1e1;
+    top: -2px;
+    padding: 5px;
+}
+.profile-contact .button .icon {
+    font-size: 14px;
+}
+}
+.postprofile {
+    color: #0076b1;
+}
+.contact-icon {
+    background-image: none;
+}
+.contact-icons a:hover {
+    text-decoration: none;
+}
+
+.pm-icon:before{content:"\f086"}.email-icon:before{content:"\f003"}.jabber-icon:before{content:"\f0eb";font-size:16px}.phpbb_icq-icon:before{content:"\2698"}.phpbb_wlm-icon:before{content:"\f007"}.phpbb_aol-icon:before{content:"\f031"}.phpbb_website-icon:before{content:"\f0ac"}.phpbb_youtube-icon:before{content:"\f16a"}.phpbb_facebook-icon:before{content:"\f230"}.phpbb_googleplus-icon:before{content:"\f0d5"}.phpbb_skype-icon:before{content:"\f17e"}.phpbb_twitter-icon:before{content:"\f099"}.phpbb_yahoo-icon:before{content:"\f19e"}
+.contact-icon:before {
+	font-family: FontAwesome;
+	font-size: 16px;
+	font-weight: normal;
+    text-shadow: none;
+	position: relative;
+    top: -4px;	
+}
+.format-buttons .button {
+    margin-bottom: 5px;
+}
+dl.row-item dt {
+    background-position: 5px 90%;
+}
+@media (max-width: 840px){
+	dl.row-item dt {
+    background-position: 5px 80%;
+}
 }
