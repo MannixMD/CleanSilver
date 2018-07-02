@@ -840,7 +840,11 @@ table.table1 tbody tr:hover, table.table1 tbody tr.hover {
     color: #000;
 }
 .pollbar1,.pollbar2,.pollbar3,.pollbar4,.pollbar5 {
-    background-color: #008cd2;
+	background: rgb(13,78,153); /* Old browsers */
+	background: -moz-linear-gradient(45deg, rgba(13,78,153,1) 0%, rgba(27,130,214,1) 50%, rgba(49,150,226,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg, rgba(13,78,153,1) 0%,rgba(27,130,214,1) 50%,rgba(49,150,226,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg, rgba(13,78,153,1) 0%,rgba(27,130,214,1) 50%,rgba(49,150,226,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d4e99', endColorstr='#3196e2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     border-bottom-color: #008cd2;
     border-right-color: #008cd2;
 }
@@ -1342,13 +1346,16 @@ table.zebra-list tr:nth-child(odd) td, ul.zebra-list li:nth-child(odd), table.ze
 }
 }
 .postprofile {
-    color: #0076b1;
+    color:	#4c4c4c;
 }
 .contact-icon {
     background-image: none;
 }
 .contact-icons a:hover {
     text-decoration: none;
+}
+div.rules {
+    border-radius: 0;
 }
 
 .pm-icon:before{content:"\f086"}.email-icon:before{content:"\f003"}.jabber-icon:before{content:"\f0eb";font-size:16px}.phpbb_icq-icon:before{content:"\2698"}.phpbb_wlm-icon:before{content:"\f007"}.phpbb_aol-icon:before{content:"\f031"}.phpbb_website-icon:before{content:"\f0ac"}.phpbb_youtube-icon:before{content:"\f16a"}.phpbb_facebook-icon:before{content:"\f230"}.phpbb_googleplus-icon:before{content:"\f0d5"}.phpbb_skype-icon:before{content:"\f17e"}.phpbb_twitter-icon:before{content:"\f099"}.phpbb_yahoo-icon:before{content:"\f19e"}
