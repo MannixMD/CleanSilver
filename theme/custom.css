@@ -46,7 +46,6 @@ h2, h3 {
     left: 0;
     background-color: #f5f5f5; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
-	-ms-overflow-style: none;
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 	}
@@ -401,7 +400,7 @@ a.header-avatar span:after {
     padding: 5px;
 }
 .custombbcode {
-    border-radius: 5px;
+    border-radius: 0;
 }
 .custombbcode:before {
     border: none;
@@ -720,11 +719,9 @@ cite a {
 	border-radius: 0;
 }
 a.button1, input.button1, input.button3, a.button2, input.button2 {
-	color: #000;
-    background-color: #d4d4d4;
-    background-image: none;
-    border-radius: 5px;
-    padding: 5px;
+    color: #000;
+    background-color: #46bffb;
+	background-image:none;
 }
 a.button2, input.button2, input.button3,a.button1, input.button1 {
     border-color: transparent;
