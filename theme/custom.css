@@ -87,7 +87,7 @@ h2, h3 {
 }
 .nav {
 	
-	margin-bottom: 15px;
+	margin-bottom: 35px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -1396,3 +1396,10 @@ dl.row-item dt {
 .responsive-tab > a.responsive-tab-link {
     line-height: 1.5em;
 }
+/*.forum-image {
+	padding-top: 0;
+}
+.forum-image img {
+    width: 20px;
+    height: 20px;
+}*/
