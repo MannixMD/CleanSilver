@@ -28,9 +28,11 @@
 <!-- IF S_HAS_SUBFORUM -->
 <!-- IF not S_IS_BOT and U_MARK_FORUMS -->
 	<div class="action-bar compact">
+	<ul>
 	<li id="subforum">
 		<a href="{U_MARK_FORUMS}" class="mark-read leftside" data-ajax="mark_forums_read"  > {L_MARK_SUBFORUMS_READ}</a>
 	</li>
+	<ul>
 	</div>
 <!-- ENDIF -->
 	<!-- INCLUDE forumlist_body.html -->
@@ -78,8 +80,9 @@
 
 </div>
 	<div class="pagination">
+	<ul>
 		<!-- IF not S_IS_BOT and U_MARK_TOPICS and .topicrow --><li id="topics"><a href="{U_MARK_TOPICS}" class="mark" accesskey="m" data-ajax="mark_topics_read">{L_MARK_TOPICS_READ}</a></li> <!-- ENDIF -->
-		
+		</ul>
 		<!-- IF .pagination -->
 			<!-- INCLUDE pagination.html -->
 		<!-- ELSE -->

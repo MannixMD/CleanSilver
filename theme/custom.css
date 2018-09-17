@@ -9,6 +9,9 @@ a.forumtitle, a.topictitle {
 	font-family: Roboto;
     font-weight: 400;
 }
+li.header dt, li.header dd{
+	font-family: Roboto;
+}
 h2, h3 {
 	font-family:Roboto;
     font-weight: 400;	
@@ -169,6 +172,7 @@ h2, h3 {
     position: relative;
     left: 15px;
 	border: 2px solid #e1e1e1;
+    min-width: 30px;	
 }
 @keyframes badge{
 0%{opacity: 0;}
