@@ -92,6 +92,7 @@ for (i = 0; i < dropdown.length; i++) {
 <!-- IF S_COOKIE_NOTICE -->
 	<script src="{T_ASSETS_PATH}/cookieconsent/cookieconsent.min.js?assets_version={T_ASSETS_VERSION}"></script>
 	<script>
+		if (typeof window.cookieconsent === "object") {	
 		window.addEventListener("load", function(){
 			window.cookieconsent.initialise({
 				"palette": {
@@ -107,9 +108,11 @@ for (i = 0; i < dropdown.length; i++) {
 					"message": "{LA_COOKIE_CONSENT_MSG}",
 					"dismiss": "{LA_COOKIE_CONSENT_OK}",
 					"link": "{LA_COOKIE_CONSENT_INFO}",
-					"href": "{LA_COOKIE_CONSENT_HREF}"
+						"href": "{UA_PRIVACY}"
+					}
+				});
+			});
 				}
-			})});
 	</script>
 <!-- ENDIF -->
 <script>
