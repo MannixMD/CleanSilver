@@ -655,8 +655,11 @@ li.breadcrumbs {
     background-image: url("./images/no_avatar.gif");
     height: 90px;
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: center;
     background-size: 90px;
+}
+.postprofile .no-avatar .avatar-container {
+    margin-bottom: 10px;
 }
 @media (max-width: 700px){
 	.postprofile .no-avatar .avatar-container {
@@ -1446,3 +1449,22 @@ dl.row-item dt {
     width: 20px;
     height: 20px;
 }*/
+
+.postprofile a .avatar {
+    margin: 0 auto;
+}
+.postprofile .avatar {
+    float: none;
+}
+.postprofile {
+    text-align: center;
+}
+@media (max-width: 700px) {
+
+.postprofile .avatar {
+    float: left;
+}
+.postprofile {
+    text-align: left;
+}
+}
