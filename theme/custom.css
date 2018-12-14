@@ -151,7 +151,7 @@ h2, h3 {
 }
 .navbar .header-profile {
     float: left;
-    margin-right: 5px;
+    margin-right: 15px;
 	margin-left: -12px;
 	
 }
@@ -307,7 +307,7 @@ a.header-avatar span:after {
     position: sticky;
     top: 0;
     z-index: 10;
-    border-bottom: 3px solid #0076b1;	
+    border-bottom: 3px solid #b0c8d4;	
 }
 .stat-block {
     clear: both;
@@ -1467,4 +1467,14 @@ dl.row-item dt {
 .postprofile {
     text-align: left;
 }
+}
+.search-header {
+    margin-top: 0;
+    margin-right: 0;
+    position: absolute;
+    right: 30px;
+}
+.search-header .button {
+    padding: 8px;
+    margin: 0 1px;
 }
