@@ -1077,6 +1077,7 @@ table.zebra-list tr:nth-child(odd) td, ul.zebra-list li:nth-child(odd), table.ze
 .topic_read_locked_mine:before {
 	content: "\f023"; 
 	color: #868686; 
+	font-size: 40px;
 	 
 }
 .global_unread_locked:before,
@@ -1090,6 +1091,7 @@ table.zebra-list tr:nth-child(odd) td, ul.zebra-list li:nth-child(odd), table.ze
 .topic_unread_locked_mine:before {
 	content: "\f023"; 
 	color: #0076b1; 
+	font-size: 40px;
 	
 }
 .forum_link:before { 
@@ -1478,3 +1480,4 @@ dl.row-item dt {
     padding: 8px;
     margin: 0 1px;
 }
+

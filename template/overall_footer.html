@@ -52,6 +52,7 @@
 		})(jQuery);
 	</script>
 <!-- ENDIF -->
+<!-- IF SCRIPT_NAME == 'index' || SCRIPT_NAME == 'viewforum' || SCRIPT_NAME == 'viewtopic' -->
 <script>
 function openPage(pageName,elmnt,color) {
     var i, tabcontent, tablinks;
@@ -71,7 +72,7 @@ function openPage(pageName,elmnt,color) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
-
+<!-- ENDIF -->
 <script>
 /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
 var dropdown = document.getElementsByClassName("dropdown-btn");
@@ -132,7 +133,7 @@ jQuery("#forums").detach().appendTo('#mark-forums')
 jQuery("#topics").detach().appendTo('#mark-forums')
 
 </script>
-
+<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
 <script>
 // Get the modal
 var modal = document.getElementById('myModal');
@@ -160,6 +161,7 @@ window.onclick = function(event) {
     }
 }
 </script>
+<!-- ENDIF -->
 <!-- EVENT overall_footer_after -->
 
 <!-- IF S_PLUPLOAD --><!-- INCLUDE plupload.html --><!-- ENDIF -->
