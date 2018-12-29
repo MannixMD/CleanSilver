@@ -32,15 +32,15 @@
 	<!-- IF not S_IS_BOT -->{RUN_CRON_TASK}<!-- ENDIF -->
 </div>
 
-<script type="text/javascript" src="{T_JQUERY_LINK}"></script>
-<!-- IF S_ALLOW_CDN --><script type="text/javascript">window.jQuery || document.write('\x3Cscript src="{T_ASSETS_PATH}/javascript/jquery.min.js?assets_version={T_ASSETS_VERSION}">\x3C/script>');</script><!-- ENDIF -->
-<script type="text/javascript" src="{T_ASSETS_PATH}/javascript/core.js?assets_version={T_ASSETS_VERSION}"></script>
+<script src="{T_JQUERY_LINK}"></script>
+<!-- IF S_ALLOW_CDN --><script>window.jQuery || document.write('\x3Cscript src="{T_ASSETS_PATH}/javascript/jquery.min.js?assets_version={T_ASSETS_VERSION}">\x3C/script>');</script><!-- ENDIF -->
+<script src="{T_ASSETS_PATH}/javascript/core.js?assets_version={T_ASSETS_VERSION}"></script>
 <!-- INCLUDEJS forum_fn.js -->
 <!-- INCLUDEJS ajax.js -->
 
 
 <!-- IF S_ALLOW_CDN -->
-	<script type="text/javascript">
+	<script>
 		(function($){
 			var $fa_cdn = $('head').find('link[rel="stylesheet"]').first(),
 				$span = $('<span class="fa" style="display:none"></span>').appendTo('body');
@@ -52,6 +52,7 @@
 		})(jQuery);
 	</script>
 <!-- ENDIF -->
+<!-- IF SCRIPT_NAME == 'index' || SCRIPT_NAME == 'viewforum' || SCRIPT_NAME == 'viewtopic' -->
 <script>
 function openPage(pageName,elmnt,color) {
     var i, tabcontent, tablinks;
@@ -71,7 +72,7 @@ function openPage(pageName,elmnt,color) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
-
+<!-- ENDIF -->
 <script>
 /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
 var dropdown = document.getElementsByClassName("dropdown-btn");
@@ -92,6 +93,7 @@ for (i = 0; i < dropdown.length; i++) {
 <!-- IF S_COOKIE_NOTICE -->
 	<script src="{T_ASSETS_PATH}/cookieconsent/cookieconsent.min.js?assets_version={T_ASSETS_VERSION}"></script>
 	<script>
+		if (typeof window.cookieconsent === "object") {	
 		window.addEventListener("load", function(){
 			window.cookieconsent.initialise({
 				"palette": {
@@ -107,9 +109,11 @@ for (i = 0; i < dropdown.length; i++) {
 					"message": "{LA_COOKIE_CONSENT_MSG}",
 					"dismiss": "{LA_COOKIE_CONSENT_OK}",
 					"link": "{LA_COOKIE_CONSENT_INFO}",
-					"href": "{LA_COOKIE_CONSENT_HREF}"
+						"href": "{UA_PRIVACY}"
+					}
+				});
+			});
 				}
-			})});
 	</script>
 <!-- ENDIF -->
 <script>
@@ -129,7 +133,7 @@ jQuery("#forums").detach().appendTo('#mark-forums')
 jQuery("#topics").detach().appendTo('#mark-forums')
 
 </script>
-
+<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
 <script>
 // Get the modal
 var modal = document.getElementById('myModal');
@@ -157,6 +161,7 @@ window.onclick = function(event) {
     }
 }
 </script>
+<!-- ENDIF -->
 <!-- EVENT overall_footer_after -->
 
 <!-- IF S_PLUPLOAD --><!-- INCLUDE plupload.html --><!-- ENDIF -->
