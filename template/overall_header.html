@@ -48,7 +48,6 @@
 <link href="{T_FONT_AWESOME_LINK}" rel="stylesheet">
 <link href="{ROOT_PATH}styles/prosilver/theme/stylesheet.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
 <link href="{T_THEME_PATH}/custom.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
-<link href="{ROOT_PATH}styles/prosilver/theme/{T_THEME_LANG_NAME}/stylesheet.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,600,700,normal,bold" />
 <!-- IF S_CONTENT_DIRECTION eq 'rtl' -->
 	<link href="{T_THEME_PATH}/bidi.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
@@ -81,9 +80,10 @@ OPTIONS TO TWEAK IN OVERALL_HEADER.HTML
 
 <!-- EVENT overall_header_body_before -->
 <!-- INCLUDE topbar_header.html -->
-<div class="backheaderbar">
+
 <div id="page-header">
 		<div class="headerbar" role="banner">
+		<div class="inner-headerbar">
 		<!-- EVENT overall_header_headerbar_before -->
 			<div class="inner">
 
@@ -114,30 +114,20 @@ OPTIONS TO TWEAK IN OVERALL_HEADER.HTML
 			<!-- ENDIF -->
 			<!-- EVENT overall_header_searchbox_after -->
 			<!-- ENDIF -->
-<div class="dropdown-container dropdown-button-control times">
-	<span title="{LAST_VISIT_DATE} &bull; {CURRENT_TIME}" class="dropdown-trigger dropdown-select">
-		<i class="icon fa-clock-o icon-xl fa-fw" aria-hidden="true"></i>
-	</span>
-	<div class="dropdown hidden">
-		<div class="dropdown-contents">
-			<p class="{S_CONTENT_FLOW_END} responsive-center time<!-- IF S_USER_LOGGED_IN --> rightside<!-- ENDIF -->"><!-- IF S_USER_LOGGED_IN -->{LAST_VISIT_DATE}<!-- ELSE -->{CURRENT_TIME}<!-- ENDIF --></p>
-<!-- IF S_USER_LOGGED_IN --><p class="responsive-center time">{CURRENT_TIME}</p><!-- ENDIF -->
-		</div>
-	</div>
-</div>
+
 
 			</div>
 
 			<!-- EVENT overall_header_headerbar_after -->
 
-			
+			</div>
 		</div>
 		
 		<!-- EVENT overall_header_navbar_before -->
 		
 
 	</div>
-	</div>
+	
 <div id="wrap" class="wrap">
 	
 	<a id="top" class="top-anchor" accesskey="t"></a>
