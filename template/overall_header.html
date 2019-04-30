@@ -114,7 +114,17 @@ OPTIONS TO TWEAK IN OVERALL_HEADER.HTML
 			<!-- ENDIF -->
 			<!-- EVENT overall_header_searchbox_after -->
 			<!-- ENDIF -->
-
+<div class="dropdown-container dropdown-button-control times">
+	<span title="{LAST_VISIT_DATE} &bull; {CURRENT_TIME}" class="dropdown-trigger dropdown-select">
+		<i class="icon fa-clock-o icon-xl fa-fw" aria-hidden="true"></i>
+	</span>
+	<div class="dropdown hidden">
+		<div class="dropdown-contents">
+			<p class="{S_CONTENT_FLOW_END} responsive-center time<!-- IF S_USER_LOGGED_IN --> rightside<!-- ENDIF -->"><!-- IF S_USER_LOGGED_IN -->{LAST_VISIT_DATE}<!-- ELSE -->{CURRENT_TIME}<!-- ENDIF --></p>
+<!-- IF S_USER_LOGGED_IN --><p class="responsive-center time">{CURRENT_TIME}</p><!-- ENDIF -->
+		</div>
+	</div>
+</div>
 
 			</div>
 

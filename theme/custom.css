@@ -1484,7 +1484,7 @@ dl.row-item dt {
     margin: 0 1px;
 }
 
-dd.topics, dd.posts, dd.redirect, dd.views {
+ul.topiclist.forums dd.topics, ul.topiclist.forums dd.posts, ul.topiclist.forums dd.redirect, ul.topiclist.forums dd.views {
     font-weight: 600;
 }
 dd.redirect >span {
