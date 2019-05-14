@@ -2,8 +2,6 @@
 <div class="topbar">
 
 <div class="inner">
-
-
 		<div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 <div class="mark-buttons">
@@ -19,8 +17,6 @@
 			<li>
 				<a class="nav-username">{CURRENT_USERNAME_SIMPLE}</a>
 				</li>
-					
-					
 						<!-- IF U_RESTORE_PERMISSIONS -->
 							<li>
 								<a href="{U_RESTORE_PERMISSIONS}">
@@ -30,7 +26,6 @@
 						<!-- ENDIF -->
 
 					<!-- EVENT navbar_header_profile_list_before -->
-
 						<li>
 							<a href="{U_PROFILE}" title="{L_PROFILE}" role="menuitem">
 								<i class="icon fa-sliders fa-fw" aria-hidden="true"></i><span>{L_PROFILE}</span>
@@ -44,16 +39,11 @@
 						</li>
 						<!-- ENDIF -->
 						<!-- EVENT navbar_header_profile_list_after -->
-
-						
 						<li>
 							<a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x" role="menuitem">
 								<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>{L_LOGIN_LOGOUT}</span>
 							</a>
 						</li>
-					
-				
-			
 			<!-- EVENT navbar_header_username_append -->
 
 		<!-- IF S_DISPLAY_PM -->
@@ -131,9 +121,7 @@
 								</a>
 							</li>
 					<!-- ENDIF -->
-
 					<!-- IF not S_IS_BOT and (S_DISPLAY_MEMBERLIST or U_TEAM) -->
-						
 						<!-- IF S_DISPLAY_MEMBERLIST -->
 							<li>
 								<a href="{U_MEMBERLIST}" role="menuitem">
@@ -149,13 +137,7 @@
 							</li>
 						<!-- ENDIF -->
 					<!-- ENDIF -->
-					
-
 					<!-- EVENT navbar_header_quick_links_after -->
-				
-			
-		
-
 		<!-- EVENT overall_header_navigation_prepend -->
 		<li <!-- IF not S_USER_LOGGED_IN -->data-skip-responsive="true"<!-- ELSE -->data-last-responsive="true"<!-- ENDIF -->>
 			<a href="{U_FAQ}" rel="help" title="{L_FAQ_EXPLAIN}" role="menuitem">
@@ -177,11 +159,7 @@
 				</a>
 			</li>
 		<!-- ENDIF -->
-
-	
 	</ul>
-  
-			
 </div>
 <div class="navbar" role="navigation">
 	<div class="inner">
@@ -207,16 +185,8 @@
 			<!-- END navlinks -->
 			<!-- EVENT overall_header_breadcrumb_append -->
 		</li>
-		
-	
 		<!-- EVENT overall_header_breadcrumbs_after -->
-
-		
-		
 	</ul>
-	
-		
-	
 	</div>
 </div>
 	</div>
@@ -249,5 +219,3 @@
 
 </div>
 </div>
-
-
