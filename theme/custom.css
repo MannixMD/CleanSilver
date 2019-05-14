@@ -89,7 +89,6 @@ h2, h3 {
     margin-left: 50px;
 }
 .nav {
-	
 	margin-bottom: 35px;
 }
 
@@ -99,19 +98,18 @@ h2, h3 {
     .sidenav a {font-size: 18px;}
 }
 
-
-.headerbar {
-    border-radius: 0;
+.inner-headerbar {
+	border-radius: 0;
     max-width: 1220px;
     margin: 0 auto;
-	background-color: transparent;
-    background-image: none;
 }
-.backheaderbar {
+
+.headerbar {
+	border-radius: 0;
 	background-color: #0076b1;
     background-image: none;
-    background-repeat: repeat-x;
 }
+
 .wrap {
     border-radius: 0;
     padding: 0 15px 0 15px;
@@ -291,7 +289,10 @@ a.header-avatar span:after {
 }
 .headerbar {
 	height: auto;
+	margin-left: 0;
+	margin-right: 0;
 }
+
 .login, .register {
 	bottom: 35px;
 }
@@ -1481,3 +1482,40 @@ dl.row-item dt {
     margin: 0 1px;
 }
 
+ul.topiclist.forums dd.topics, ul.topiclist.forums dd.posts, ul.topiclist.forums dd.redirect, ul.topiclist.forums dd.views {
+    font-weight: 600;
+}
+dd.redirect >span {
+    text-align: left;
+}
+/* Left
+.postprofile {
+    float: left;
+    width: 20%;
+    border-left: none;
+    border-right: 1px solid #FFF;
+}
+.postbody {
+    float: right;
+    width: 79%;
+}
+
+.online:before, .offline:before {
+    left: 5px;
+}
+@media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
+.postprofile {
+    float: none;
+    width: auto;
+    border-right: none;
+}
+.postbody {
+	float: none;
+	width: auto;
+}
+.online:before, .offline:before {
+	right: 5px;
+	left: auto;
+}
+}
+*/

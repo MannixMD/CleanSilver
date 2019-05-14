@@ -2,8 +2,6 @@
 <div class="topbar">
 
 <div class="inner">
-
-
 		<div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 <div class="mark-buttons">
@@ -19,8 +17,6 @@
 			<li>
 				<a class="nav-username">{CURRENT_USERNAME_SIMPLE}</a>
 				</li>
-					
-					
 						<!-- IF U_RESTORE_PERMISSIONS -->
 							<li>
 								<a href="{U_RESTORE_PERMISSIONS}">
@@ -30,7 +26,6 @@
 						<!-- ENDIF -->
 
 					<!-- EVENT navbar_header_profile_list_before -->
-
 						<li>
 							<a href="{U_PROFILE}" title="{L_PROFILE}" role="menuitem">
 								<i class="icon fa-sliders fa-fw" aria-hidden="true"></i><span>{L_PROFILE}</span>
@@ -44,16 +39,11 @@
 						</li>
 						<!-- ENDIF -->
 						<!-- EVENT navbar_header_profile_list_after -->
-
-						
 						<li>
 							<a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x" role="menuitem">
 								<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>{L_LOGIN_LOGOUT}</span>
 							</a>
 						</li>
-					
-				
-			
 			<!-- EVENT navbar_header_username_append -->
 
 		<!-- IF S_DISPLAY_PM -->
@@ -131,9 +121,7 @@
 								</a>
 							</li>
 					<!-- ENDIF -->
-
 					<!-- IF not S_IS_BOT and (S_DISPLAY_MEMBERLIST or U_TEAM) -->
-						
 						<!-- IF S_DISPLAY_MEMBERLIST -->
 							<li>
 								<a href="{U_MEMBERLIST}" role="menuitem">
@@ -149,13 +137,7 @@
 							</li>
 						<!-- ENDIF -->
 					<!-- ENDIF -->
-					
-
 					<!-- EVENT navbar_header_quick_links_after -->
-				
-			
-		
-
 		<!-- EVENT overall_header_navigation_prepend -->
 		<li <!-- IF not S_USER_LOGGED_IN -->data-skip-responsive="true"<!-- ELSE -->data-last-responsive="true"<!-- ENDIF -->>
 			<a href="{U_FAQ}" rel="help" title="{L_FAQ_EXPLAIN}" role="menuitem">
@@ -177,11 +159,7 @@
 				</a>
 			</li>
 		<!-- ENDIF -->
-
-	
 	</ul>
-  
-			
 </div>
 <div class="navbar" role="navigation">
 	<div class="inner">
@@ -191,31 +169,24 @@
 	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
 	
 		<!-- DEFINE $MICRODATA = ' itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope' -->
+		{% set navlink_position = 1 %}
 		<!-- EVENT overall_header_breadcrumbs_before -->
 		<li class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
 			<!-- IF U_SITE_HOME -->
-				<span class="crumb" {$MICRODATA}><a href="{U_SITE_HOME}" itemprop="url" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="title">{L_SITE_HOME}</span></a></span>
+				<span class="crumb" {$MICRODATA}><a href="{U_SITE_HOME}" itemtype="https://schema.org/Thing" itemprop="item" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="name">{L_SITE_HOME}</span></a><meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" /></span>
 			<!-- ENDIF -->
 			<!-- EVENT overall_header_breadcrumb_prepend -->
-				<span class="crumb" {$MICRODATA}><a href="{U_INDEX}" itemprop="url" accesskey="h" data-navbar-reference="index"><!-- IF not U_SITE_HOME --><i class="icon fa-home fa-fw"></i><!-- ENDIF --><span itemprop="title">{L_INDEX}</span></a></span>
+				<span class="crumb" {$MICRODATA}><a href="{U_INDEX}" itemtype="https://schema.org/Thing" itemprop="item" accesskey="h" data-navbar-reference="index"><!-- IF not U_SITE_HOME --><i class="icon fa-home fa-fw"></i><!-- ENDIF --><span itemprop="name">{L_INDEX}</span></a><meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" /></span>
 
 			<!-- BEGIN navlinks -->
 				<!-- EVENT overall_header_navlink_prepend -->
-				<span class="crumb" {$MICRODATA}<!-- IF navlinks.MICRODATA --> {navlinks.MICRODATA}<!-- ENDIF -->><a href="{navlinks.U_VIEW_FORUM}" itemprop="url"><span itemprop="title">{navlinks.FORUM_NAME}</span></a></span>
+				<span class="crumb" {$MICRODATA}<!-- IF navlinks.MICRODATA --> {navlinks.MICRODATA}<!-- ENDIF -->><a href="{navlinks.U_VIEW_FORUM}" itemtype="https://schema.org/Thing" itemprop="item"><span itemprop="name">{navlinks.FORUM_NAME}</span></a><meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" /></span>
 				<!-- EVENT overall_header_navlink_append -->
 			<!-- END navlinks -->
 			<!-- EVENT overall_header_breadcrumb_append -->
 		</li>
-		
-	
 		<!-- EVENT overall_header_breadcrumbs_after -->
-
-		
-		
 	</ul>
-	
-		
-	
 	</div>
 </div>
 	</div>
@@ -240,6 +211,7 @@
 			<!-- ENDIF -->
 			<input type="submit" tabindex="5" name="login" value="{L_LOGIN}" class="button2" />
 			{S_LOGIN_REDIRECT}
+			{S_FORM_TOKEN_LOGIN}
 		</fieldset>
 	</form>
 <!-- ENDIF -->
@@ -247,5 +219,3 @@
 
 </div>
 </div>
-
-
