@@ -32,12 +32,13 @@ h2, h3 {
 .site_logo {
     display: inline-block;
     background-repeat: no-repeat;
-    background-position: 0% 0%;
+    background-position: center;
     background-size: 100%;
     max-width: 100%;
-    height: 52px;
-    width: 149px;
+    height: 65px;
+    width: 200px;
     border-radius: 0px;
+    background-image: url("./images/phpbb.svg");
 }
 /* The side navigation menu */
 .sidenav {
@@ -236,7 +237,7 @@ body {
 .header {
     background-color: #0076B1;
 	padding: 10px;
-	box-shadow: 0 0 4px #717171;
+	box-shadow: 0 0 1px #717171;
 	margin: 0 -5px 4px -5px !important;
 }
 .forabg, .forumbg {
@@ -635,10 +636,7 @@ a.notification-block {
     font-size: 12px;
     text-align: center;	
 }
-.page-footer {
-    margin-left: -15px;
-    margin-right: -15px;
-}
+
 
 @media (max-width:320px){
 	.breadcrumbs .crumb a {
@@ -674,43 +672,13 @@ li.breadcrumbs {
 }
 .online{
 	background-image:none !important;
-	animation-name: online;
 }
-.offline:before {
-    content: "\f111";
-    font-family: fontawesome;
-    font-size: 18px;
-    position: absolute;
-    right: 5px;
-    color: #a20000;
-    text-shadow: 0 0 1px #a20000;	
-}
-.online:before {
-    content: "\f111";
-    font-family: fontawesome;
-    font-size: 18px;
-    position: absolute;
-    right: 5px;
+.online-mark {
     color: #01a200;
-    text-shadow: 0 0 1px #01a200;	
 }
-.online-profile:before {
-    content: "\f111";
-    font-family: fontawesome;
-    font-size: 18px;
-    position: relative;
-    float: right;
-    color: #01a200;
-    text-shadow: 0 0 1px #01a200;	
-}
-.offline-profile:before {
-    content: "\f111";
-    font-family: fontawesome;
-    font-size: 18px;
-    position: relative;
-    float: right;
+
+.offline-mark {
     color: #a20000;
-    text-shadow: 0 0 1px #a20000;	
 }
 .has-profile .postbody h3 {
     margin-right: 200px;
@@ -1482,13 +1450,13 @@ dl.row-item dt {
     margin: 0 1px;
 }
 
-ul.topiclist.forums dd.topics, ul.topiclist.forums dd.posts, ul.topiclist.forums dd.redirect, ul.topiclist.forums dd.views {
+ul.topiclist.forums dd.topics, ul.topiclist.forums dd.posts, ul.topiclist.forums dd.redirect, ul.topiclist.topics dd.views,  ul.topiclist.topics dd.posts {
     font-weight: 600;
 }
 dd.redirect >span {
     text-align: left;
 }
-/* Left
+/* Left profile switch
 .postprofile {
     float: left;
     width: 20%;
@@ -1500,9 +1468,6 @@ dd.redirect >span {
     width: 79%;
 }
 
-.online:before, .offline:before {
-    left: 5px;
-}
 @media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
 .postprofile {
     float: none;
@@ -1512,10 +1477,6 @@ dd.redirect >span {
 .postbody {
 	float: none;
 	width: auto;
-}
-.online:before, .offline:before {
-	right: 5px;
-	left: auto;
 }
 }
 */
